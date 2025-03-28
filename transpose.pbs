@@ -1,0 +1,14 @@
+#PBS -S /bin/bash
+#PBS -q batch
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=03:00:00
+#PBS -l mem=4096mb
+#PBS -N transpose
+#PBS -o transpose.out
+#PBS -e transpose.err
+#PBS -m abe
+
+cd ~/compute_workshop/
+module load python
+time python matrix_transpose.py > output
+
